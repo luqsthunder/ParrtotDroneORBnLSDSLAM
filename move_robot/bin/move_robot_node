@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import rospy
+from move_robot.move import Move, MoveException
+
+
+if __name__ == '__main__':
+    try:
+        move = Move()
+    except MoveException as e:
+        rospy.logfatal('{}: Shutting down template node'.format(e))
+    except rospy.ROSInterruptException:
+        pass

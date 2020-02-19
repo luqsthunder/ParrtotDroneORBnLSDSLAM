@@ -1,0 +1,9 @@
+[submodule "orb_slam_2_ros"]
+	path = orb_slam_2_ros
+	url = https://github.com/appliedAI-Initiative/orb_slam_2_ros
+[submodule "parrot_ardrone"]
+	path = parrot_ardrone
+	url = https://luqsthunder@bitbucket.org/theconstructcore/parrot_ardrone.git
+[submodule "spawn_robot_tools"]
+	path = spawn_robot_tools
+	url = https://bitbucket.org/theconstructcore/spawn_robot_tools.git

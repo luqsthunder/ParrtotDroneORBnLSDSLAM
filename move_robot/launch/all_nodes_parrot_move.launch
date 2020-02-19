@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- start gzserver and load the map -->
+  <rosparam command="load" file="$(find rospy_template)/config/config.yaml" />
+
+  <node name="gazebo" pkg="sjtu_drone" type="start_gzserver" args="$(find sjtu_drone)/worlds/garching_kitchen.world"/>
+  <node name="gui" pkg="sjtu_drone" type="start_gui" respawn="True"/>
+  <node name="spawn_model" pkg="sjtu_drone" type="spawn_model" respawn="false"/>
+  <include file="$(find orb_slam2_ros)/ros/launch/orb_slam2_d435_mono.launch"/>
+  <node name="move_robot_node" pkg="move_robot" type="move_robot_node" output="screen" />
+</launch>
